@@ -4,7 +4,6 @@ import React from "react";
 import { CustomButton } from "@/components";
 
 const Hero = () => {
-  const handleScroll = () => {};
 
   return (
     <div className="hero">
@@ -20,7 +19,6 @@ const Hero = () => {
         <CustomButton
           title="Explorar Coches"
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
-          handleClick={handleScroll}
         />
       </div>
     </div>
