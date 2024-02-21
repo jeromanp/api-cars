@@ -1,10 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 import { CustomButton } from "@/components";
 
 const Hero = () => {
-
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
@@ -20,6 +20,17 @@ const Hero = () => {
           title="Explorar Coches"
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
         />
+      </div>
+      <div className="hero__image-container">
+        <div className="hero__image">
+          <Image
+            src="/hero.png"
+            alt="Hero Image"
+            fill
+            className="object-contain"
+          />
+          <div className="hero__image-overlay" />
+        </div>
       </div>
     </div>
   );
