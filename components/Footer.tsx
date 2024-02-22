@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { footerLinks } from "@/constants";
 
 const Footer = () => {
   return (
@@ -18,7 +19,16 @@ const Footer = () => {
             RoPi Car 2024 <br /> Todos los derechos reservados &copy;{" "}
           </p>
         </div>
-        <div className="footer__links"></div>
+        
+
+        <div className="footer__copyrights-link">
+          <Link href="/" className="text-gray-500">
+            Política de privacidad
+          </Link>
+          <Link href="/" className="text-gray-500">
+            Terminos y Condiciones
+          </Link>
+        </div>
       </div>
     </footer>
   );
