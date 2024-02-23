@@ -15,9 +15,9 @@ export default function Home() {
           <SeachBar/>
           <div className="home__filter-container">{/* <CustomFilter title="fuel" /> */}
           <CustomFilter/>
-          {/* <CustomFilter title="year" /> */}
-
-          
+          <CustomFilter/>
+          {/* <CustomFilter title="fuel" /> */}
+          {/* <CustomFilter title="year" /> */}          
           </div>
         </div>
       </div>
