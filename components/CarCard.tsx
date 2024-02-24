@@ -49,9 +49,35 @@ year:1993
           src="/hero.png"
           alt={model}
           fill
-          priority          
+          priority
           className="object-contain"
         />
+      </div>
+
+      <div className="relative flex w-full mt-2">
+        <div className="flex group-hover:invisible w-full justify-between text-gray-500">
+          <div className="flex flex-col justify-center items-center gap-2">
+            <Image
+              src="/steering-wheel.svg"
+              alt="steering wheel"
+              width={20}
+              height={20}
+            />
+            <p className="text-[14px]">
+              {transmission === "a" ? "Automático" : "Manual"}
+            </p>
+          </div>
+
+          <div className="flex flex-col justify-center items-center gap-2">
+            <Image src="/tire.svg" alt="tire" width={20} height={20} />
+            <p className="text-[14px]">{drive.toUpperCase()}</p>
+          </div>
+
+          <div className="flex flex-col justify-center items-center gap-2">
+            <Image src="/gas.svg" alt="gas" width={20} height={20} />
+            <p className="text-[14px]">{city_mpg} MPG</p>
+          </div>
+        </div>
       </div>
     </div>
   );
