@@ -31,8 +31,3 @@ export interface CarProps {
 }
 
 
-export interface CarDetailsProps {
-  isOpen:boolean;
-  closeModal:()=> void;
-  car:CarProps;
-}
