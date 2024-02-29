@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { SearchManufacturer } from "@/components";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
@@ -29,6 +29,8 @@ const SeachBar = () => {
     if(manufacturer === "" && model === ""){
       return alert("Realiza una búsqueda")
     }
+
+    updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase());
 
   }
 
