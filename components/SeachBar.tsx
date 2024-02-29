@@ -4,21 +4,21 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { SearchManufacturer } from "@/components";
 
-const SearchButton = ({ otherClasses }: { otherClasses: string }) => {
-  <button type="submit" className={`-ml-3 z-10 ${otherClasses}`}>
+const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
+  <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
     <Image
-      src="/magnifying-glass.svg"
-      alt="magnifying glass"
+      src={"/magnifying-glass.svg"}
+      alt={"magnifying glass"}
       width={40}
       height={40}
-      className="object-contain"
+      className='object-contain'
     />
-  </button>;
-};
+  </button>
+);
 
 const SeachBar = () => {
   const [manufacturer, setManufacturer] = useState("");
-const [model, setModel] = useState("")
+  const [model, setModel] = useState("");
 
   const handleSearch = () => {};
   return (
@@ -31,20 +31,24 @@ const [model, setModel] = useState("")
         <SearchButton otherClasses="sm:hidden" />
       </div>
       <div className="searchbar__item">
-        <Image 
-        src="/model-icon.png"
-        alt="Car model"
-        width={25}
-        height={25}
-        className="absolute w-[20px] h-[20px] ml-4"
+        <Image
+          src="/model-icon.png"
+          alt="Car model"
+          width={25}
+          height={25}
+          className="absolute w-[20px] h-[20px] ml-4"
         />
         <input
-        type="text"
-        name="model"
-        value={model}
+          type="text"
+          name="model"
+          value={model}
+          onChange={(e) => setModel(e.target.value)}
+          placeholder="Tiguain"
+          className="searchbar__input"
         />
-
+        <SearchButton otherClasses="sm:hidden" />
       </div>
+      <SearchButton otherClasses="max-sm:hidden" />
     </form>
   );
 };
