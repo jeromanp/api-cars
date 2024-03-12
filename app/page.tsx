@@ -2,13 +2,13 @@ import { Hero, SeachBar, CustomFilter, CarCard } from "@/components";
 import { fetchCars } from "@/utils";
 import { fuels, yearsOfProduction } from "@/constants";
 
-export default async function Home({searchParams}) {
+export default async function Home({ searchParams }) {
   const allCars = await fetchCars({
-    manufacturer:searchParams.manufacturer || "",
-    year:searchParams.year || 2024,
+    manufacturer: searchParams.manufacturer || "",
+    year: searchParams.year || 2024,
     fuel: searchParams.fue || "",
-    limit:searchParams.limit || 10,
-    model:searchParams.model || "",
+    limit: searchParams.limit || 10,
+    model: searchParams.model || "",
   });
   // console.log(allCars);
 
@@ -18,7 +18,7 @@ export default async function Home({searchParams}) {
     <main className="overflow-hidden">
       <Hero />
 
-      <di  v className="mt-12 padding-x padding-y max-width" id="discover">
+      <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">Catálogo de Coches</h1>
           <p>Explora los coches de acuerdo a tus gustos</p>
@@ -26,8 +26,7 @@ export default async function Home({searchParams}) {
 
         <div className="home__filters">
           <SeachBar />
-          <div className="home__filter-container">        
-           
+          <div className="home__filter-container">
             <CustomFilter title="fuel" options={fuels} />
             <CustomFilter title="year" options={yearsOfProduction} />
           </div>
@@ -35,8 +34,9 @@ export default async function Home({searchParams}) {
 
         {isDataEmpty ? (
           <section>
-            <h2>Resultados: <span className="text-red-500">{allCars.length
-            }</span></h2>
+            <h2>
+              Resultados: <span className="text-red-500">{allCars.length}</span>
+            </h2>
             <div className="home__cars-wrapper">
               {allCars?.map((car) => (
                 <CarCard car={car} />
@@ -51,7 +51,7 @@ export default async function Home({searchParams}) {
             <p>{allCars?.message}</p>
           </div>
         )}
-      </di>
+      </div>
     </main>
   );
 }
