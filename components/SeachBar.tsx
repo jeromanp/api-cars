@@ -26,8 +26,8 @@ const SeachBar = () => {
   const handleSearch = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    if(manufacturer === "" && model === ""){
-      return alert("Realiza una búsqueda")
+    if (manufacturer.trim() === "" && model.trim() === "") {
+      return alert("Please provide some input");
     }
 
     updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase());
