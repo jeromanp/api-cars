@@ -21,7 +21,7 @@ const Navbar = () => {
         <CustomButton
           title="Explorar coches"
           btnType="button"
-          containerStyles="bg-primary-blue text-white rounded-full mt-0"
+          containerStyles="bg-primary-blue text-white rounded-full mt-0 hover:bg-black"
           handleClick={handleScroll}
         />
       </nav>
