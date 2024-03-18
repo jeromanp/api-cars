@@ -77,3 +77,11 @@ export const deleteSearchParams = (type: string) => {
 
   return newPathname;
 };
+
+export const handleScroll = () => {
+  const nextSection = document.getElementById("discover");
+
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
