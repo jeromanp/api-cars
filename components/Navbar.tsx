@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CustomButton } from "@/components";
+import { handleScroll } from "@/utils";
 
 const Navbar = () => {
   return (
@@ -9,17 +11,18 @@ const Navbar = () => {
       <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4">
         <Link href="/" className="flex justify-center items-center">
           <Image
-            src="/logo.svg"
-            alt="Car Logo"
-            width={118}
-            height={18}
+            src="/RoPiCars.svg"
+            alt="RoPi Cars Logo"
+            width={150}
+            height={50}
             className="object-contain"
           />
         </Link>
         <CustomButton
-          title="Iniciar sesión"
+          title="Explorar coches"
           btnType="button"
-          containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
+          containerStyles="bg-primary-blue text-white rounded-full mt-10"
+          handleClick={handleScroll}
         />
       </nav>
     </header>
