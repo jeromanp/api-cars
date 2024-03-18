@@ -49,12 +49,12 @@ const Footer = () => {
         <p>@2024 RoPi Cars. Todos los derechos reservados</p>
 
         <div className="footer__copyrights-link">
-          <Link href="/" className="text-gray-500">
-            Política de Privacidad
+          <Link href="http://www.jeromanp.website" className="text-gray-500 hover:animate-bounce">
+            Sitio web de <b className="text-primary-blue">Jose Eduardo Roman</b>
           </Link>
-          <Link href="/" className="text-gray-500">
+          {/* <Link href="/" className="text-gray-500">
             Terminos y Condiciones
-          </Link>
+          </Link> */}
         </div>
       </div>
     </footer>
