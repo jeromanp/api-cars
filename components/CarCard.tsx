@@ -85,7 +85,7 @@ year:1993
           <CustomButton
             title="Ver más"
             btnType="button"
-            containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
+            containerStyles="w-full py-[16px] rounded-full bg-primary-blue hover:bg-black"
             textStyles="text-white text-[14px] leading-[17px] font-bold"
             rightIcon="/right-arrow.svg"
             handleClick={() => {

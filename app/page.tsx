@@ -20,8 +20,8 @@ export default async function Home({ searchParams }: HomeProps) {
 
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
-          <h1 className="text-4xl font-extrabold">Catálogo de Coches</h1>
-          <p>Explora los coches de acuerdo a tus gustos</p>
+          <h1 className="text-5xl font-extrabold">Catálogo de Coches</h1>
+          <p className="text-2xl my-5">Explora los distintos vehículos que tenemos para ti</p>
         </div>
 
         <div className="home__filters">

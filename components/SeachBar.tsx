@@ -6,13 +6,16 @@ import { useRouter } from "next/navigation";
 import { SearchManufacturer } from "@/components";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
-  <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
+  <button
+    type="submit"
+    className={`-ml-3 z-10 hover:scale-110 ${otherClasses}`}
+  >
     <Image
       src={"/magnifying-glass.svg"}
       alt={"magnifying glass"}
       width={40}
       height={40}
-      className='object-contain'
+      className="object-contain"
     />
   </button>
 );
@@ -23,35 +26,36 @@ const SeachBar = () => {
 
   const router = useRouter();
 
-  const handleSearch = (e:React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
     if (manufacturer.trim() === "" && model.trim() === "") {
       return alert("Please provide some input");
     }
 
     updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase());
+  };
 
-  }
+  const updateSearchParams = (model: string, manufacturer: string) => {
+    const searchParams = new URLSearchParams(window.location.search);
+    if (model) {
+      searchParams.set("model", model);
+    } else {
+      searchParams.delete("model");
+    }
 
-const updateSearchParams = (model:string, manufacturer:string) =>{
-  const searchParams = new URLSearchParams(window.location.search)
-  if (model) {
-    searchParams.set("model", model);
-  } else {
-    searchParams.delete("model");
-  }
+    if (manufacturer) {
+      searchParams.set("manufacturer", manufacturer);
+    } else {
+      searchParams.delete("manufacturer");
+    }
 
-  if (manufacturer) {
-    searchParams.set("manufacturer", manufacturer);
-  } else {
-     searchParams.delete("manufacturer");
-  }
+    const newPathname = `${
+      window.location.pathname
+    }?${searchParams.toString()}`;
 
-  const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
-
-  router.push(newPathname);
-}
+    router.push(newPathname);
+  };
 
   return (
     <form className="searchbar" onSubmit={handleSearch}>
@@ -75,7 +79,7 @@ const updateSearchParams = (model:string, manufacturer:string) =>{
           name="model"
           value={model}
           onChange={(e) => setModel(e.target.value)}
-          placeholder="Tiguain"
+          placeholder="Jetta / A3 / Trax"
           className="searchbar__input"
         />
         <SearchButton otherClasses="sm:hidden" />

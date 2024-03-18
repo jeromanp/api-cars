@@ -11,7 +11,7 @@ const Navbar = () => {
       <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4">
         <Link href="/" className="flex justify-center items-center">
           <Image
-            src="/RoPiCars.svg"
+            src="/RoPiCars.PNG"
             alt="RoPi Cars Logo"
             width={150}
             height={50}
@@ -21,7 +21,7 @@ const Navbar = () => {
         <CustomButton
           title="Explorar coches"
           btnType="button"
-          containerStyles="bg-primary-blue text-white rounded-full mt-0"
+          containerStyles="bg-primary-blue text-white rounded-full mt-0 hover:bg-black"
           handleClick={handleScroll}
         />
       </nav>
