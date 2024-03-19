@@ -30,7 +30,7 @@ const Hero = () => {
       <div className="hero__image-container">
         <div className="hero__image">
           <Image
-            src="/hero.png"
+            src="/heroo.png"
             alt="Hero Image"
             fill
             className="object-contain"
