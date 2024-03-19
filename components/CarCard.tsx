@@ -47,7 +47,7 @@ year:1993
 
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src="/hero.png"
+          src="/car-card.png"
           // src={generateCarImageUrl(car)}
           alt={model}
           fill
