@@ -69,7 +69,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                     <div className="flex gap-3">
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-100">
                         <Image
-                          src="/hero.png"
+                          src="/frente.png"
                           // src={generateCarImageUrl(car,"29")}
                           alt="Detalle coche"
                           fill
@@ -79,7 +79,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       </div>
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-100">
                         <Image
-                          src="/hero.png"
+                          src="/lado.png"
                           // src={generateCarImageUrl(car,"33")}
                           alt="Detalle coche"
                           fill
@@ -89,7 +89,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       </div>
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-100">
                         <Image
-                          src="/hero.png"
+                          src="/arriba.png"
                           // src={generateCarImageUrl(car,"13")}
                           alt="Detalle coche"
                           fill
