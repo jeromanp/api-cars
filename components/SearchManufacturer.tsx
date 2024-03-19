@@ -3,13 +3,13 @@
 import React, { useState, Fragment } from "react";
 import Image from "next/image";
 import { Combobox, Transition } from "@headlessui/react";
-import { SearchManufacturerProps } from "@/types";
+import { SearchManuFacturerProps } from "@/types";
 import { manufacturers } from "@/constants";
 
 const SearchManufacturer = ({
   manufacturer,
   setManufacturer,
-}: SearchManufacturerProps) => {
+}: SearchManuFacturerProps) => {
   const [query, setQuery] = useState("");
 
   const filteredManufacturers =
