@@ -4,9 +4,9 @@ import Head from "next/head";
 import { Navbar, Footer } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Renta, Venta de Coches",
+  title: "RoPi Cars",
   description:
-    "Sitio para visualizar vehículos y clasificarlos en torno a sus características",
+    "Sitio para visualizar vehículos y clasificarlos",
 };
 
 export default function RootLayout({
